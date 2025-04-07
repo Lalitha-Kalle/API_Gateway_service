@@ -20,6 +20,7 @@ async function signup(req, res) {
                 .json(SuccessResponse);
     } catch(error) {
         console.log(error);
+        console.log(ErrorResponse);
         ErrorResponse.error = error;
         return res
                 .status(error.statusCode)
